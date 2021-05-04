@@ -1,0 +1,29 @@
+<div class="movies">
+  <div class="search">
+    <span>Search a movie</span>
+    <div>
+      <Input class="light" @value={{this.query}} />
+      <button data-test-search type="button" class="button" {{on "click" this.onClickedSearchButton}}>Search</button>
+      <button data-test-clear type="button" class="button" {{on "click" this.onClickedClearButton}}>Clear</button>
+    </div>
+  </div>
+
+
+  <ul class="results">
+    {{#if this.searchResult}}
+      {{#each this.searchResult as |movie|}}
+        <li data-test-movies-list-item>
+          <Movie @movie={{movie}} />
+        </li>
+      {{/each}}
+    {{else}}
+      {{#each @movies as |movie|}}
+        <li data-test-movies-list-item>
+          <Movie @movie={{movie}} />
+        </li>
+      {{/each}}
+    {{/if}}
+
+  </ul>
+
+</div>

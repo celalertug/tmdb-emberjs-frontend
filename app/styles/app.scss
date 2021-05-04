@@ -1,0 +1,96 @@
+//@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fonts/Lato/Lato-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@import "app/components/movie/styles";
+@import "app/components/movies/styles";
+@import "app/components/nav-bar/styles";
+
+/**
+ * Base Elements
+ */
+
+.debug {
+  border: 1px solid red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button {
+  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+
+button {
+  font-size: 100%;
+}
+
+
+.button {
+  padding: 10px 30px 10px;
+  text-decoration: none;
+  color: #fff;
+  background: #016aba;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.9;
+  display: inline-block;
+
+  &:hover {
+    opacity: 1;
+
+  }
+}
+
+
+/**
+ * Body Container
+ */
+
+.container {
+  display: grid;
+  grid-template-rows: 25% auto;
+  grid-template-columns: 1fr 4fr 1fr;
+
+  .head {
+    grid-column-start: 1;
+    grid-column-end: end;
+  }
+
+  .body {
+    min-width: 768px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: end;
+  }
+}
+
+
+
+

@@ -1,0 +1,35 @@
+<article class="movie">
+  <Image
+    src={{@movie.image}}
+    alt="A picture of {{@movie.title}}"
+  />
+  <div data-test-movie-title class="details">
+    <h3>
+      {{@movie.title}}
+    </h3>
+
+    <div data-test-movie-release-date class="detail release_date">
+      <span>Release Date:</span> {{@movie.release_date}}
+    </div>
+    <div data-test-movie-genres data-test-genres class="detail">
+      <span>Genres:</span> {{@movie.genres}}
+    </div>
+    <div data-test-movie-user-score class="detail">
+      <span>User Score:</span> {{@movie.popularity}}
+    </div>
+    <div data-test-movie-vote-average class="detail">
+      <span>Vote Average:</span> {{@movie.vote_average}}
+    </div>
+    <div class="detail">
+      <span>Vote Count:</span> {{@movie.vote_count}}
+    </div>
+
+
+    <div class="overview">
+      <span>Overview:</span>
+      <p>{{@movie.overview}}</p>
+    </div>
+
+
+  </div>
+</article>
